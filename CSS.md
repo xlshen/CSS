@@ -1,4 +1,4 @@
-	1.overflow:hidden对float的影响
+	I.overflow:hidden对float的影响
 	通常：因为float元素脱离了文档流，所以包围它的div不占据空间（height和width都
 	为默认0的前提下），代码和显示效果如下：
 	
@@ -27,7 +27,7 @@
 	情况下，内容会溢出框外，进入相邻的空间。应用值为hidden或auto的overflow属性有
 	一个有用的副作用，这会自动地清理包含的任何浮动的元素。
 	
-	2.CSS3 border-image属性[border-image参数：图片url,裁剪位置,重复性]
+	II.CSS3 border-image属性[border-image参数：图片url,裁剪位置,重复性]
 	图片(border-image-source):使用url()调用,如果没有设置为none;
 	图片裁剪位置(border-image-slice):(1)(2)(3)
 		(1)没有单位话专指像素px,例如:border-image:url(border.gif) 27 repeat;这里27就是像素
