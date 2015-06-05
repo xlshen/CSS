@@ -1,7 +1,6 @@
 	I.overflow:hidden对float的影响
 	通常：因为float元素脱离了文档流，所以包围它的div不占据空间（height和width都
 	为默认0的前提下），代码和显示效果如下：
-	
 	@code
 	.new { background-color : gray; border: solid 1px black; }
 	.news img { float : left; }
