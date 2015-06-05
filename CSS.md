@@ -2,7 +2,7 @@
 	通常：因为float元素脱离了文档流，所以包围它的div不占据空间（height和width都
 	为默认0的前提下），代码和显示效果如下：
 	
-	@Code
+	@code
 	.new { background-color : gray; border: solid 1px black; }
 	.news img { float : left; }
 	.news p { float : right; }
@@ -55,10 +55,11 @@
 		属性(拉伸或平铺),左右的格子执行垂直方向的重复属性,而中间的那个格子则水平重复和垂直方
 		向的重复都要执行.
 	5、完成绘制，实现效果
-	实例：.border_image{
-		    width:400px;
-		    height:100px; 
-		    -moz-border-image:url(image/border.gif) 27/20px repeat; 
-		    -webkit-border-image:url(image/border.gif) 27/20px repeat; 
-		}
+	@code
+	.border_image{
+	    width:400px;
+	    height:100px; 
+	    -moz-border-image:url(image/border.gif) 27/20px repeat; 
+	    -webkit-border-image:url(image/border.gif) 27/20px repeat; 
+	}
 	注：27/20px是窝希望边框的宽度为20px,所以在CSS中设置的.
