@@ -72,11 +72,11 @@
 	2.Webkit 下
 	-webkit-linear-gradient( [<point> || <angle>,]? <stop>, <stop> [, <stop>]* )//最新发布书写语法
 	-webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) //老式语法书写规则
-	参数：-webkit-gradient 是 webkit 								   				引擎对渐变的实现参数,一共有五个.第一个参数表示渐变类型（type）,可以是linear（线性渐变）或者radial
-	（径向渐变）.第二个参数和第三个参数,都是一对值,分别表示渐变起点和终点.这对值可以用坐标形式表示,
-	也可以用关键值表示,比如 left top（左上角）和left bottom（左下角）.第四个和第五个参数,分别是两个
-	color-stop函数.color-stop函数接受两个参数,第一个表示渐变的位置,0为起点,0.5为中点,1为结束点;第二个
-	表示该点的颜色.
+	参数：-webkit-gradient 是 webkit引擎对渐变的实现参数,一共有五个.第一个参数表示渐变类型（type）,
+	可以是linear（线性渐变）或者radial（径向渐变）.第二个参数和第三个参数,都是一对值,分别表示渐变起点
+	和终点.这对值可以用坐标形式表示,也可以用关键值表示,比如 left top（左上角）和left bottom（左下角）.
+	第四个和第五个参数,分别是两个color-stop函数.color-stop函数接受两个参数,第一个表示渐变的位置,0为起点,
+	0.5为中点,1为结束点;第二个表示该点的颜色.
 	3. Opera 下
 	-o-linear-gradient([<point> || <angle>,]? <stop>, <stop> [, <stop>]); /* Opera 11.10+ */
 	参数：-o-linear-gradient 有三个参数.第一个参数表示线性渐变的方向,top 是从上到下、left 是从左到右,
