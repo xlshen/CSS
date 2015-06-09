@@ -143,7 +143,7 @@
 			.clear_me {clear:left;}
 		</style>
 
-	(2) 	<section class="clearfix"> 
+	(2)	<section class="clearfix"> 
 			<img src="test.jpg"> 
 			<p>It's fun to float.</p> 
 		</section>
