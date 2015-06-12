@@ -170,3 +170,7 @@
 	[***]float就是隐性的把内联元素转化为块元素,这是对内部的特性就是有物理特性,但是他不占据一行.
 	对外是内联元素的属性.他有个坏处就是会影响兄弟元素.相当于display:inline-block;
 	那为什么不直接display:inline-block;因为这个XX在ie6下有几个px的bug
+	
+	VI.textarea标签的cols, rows与width, height
+	[两种实现方法都可以实现调控textarea的宽度和高度,只是单位不同
+	只要用了style的width和height属性,就会忽略cols和rows属性]
