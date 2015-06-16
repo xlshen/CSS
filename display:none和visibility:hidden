@@ -1,4 +1,10 @@
     display:none和visibility:hidden
     1.空间占据
-    2.回流与渲染
+    2.回流与重绘(介绍详见[回流与重绘])
     3.株连性
+    第二点:display:none隐藏产生reflow和repaint(回流与重绘),而visibility:hidden没有这个影响前端性能的问题
+    第三点:“株连性”方面的差异
+    display:none就是“株连性”明显的声明:一旦父节点元素应用了display:none,父节点及其子孙节点元素全部不可见,
+    而且无论其子孙元素如何不屈地挣扎都无济于事
+    我们给一个父元素应用visibility:hidden,则其子孙后代也都会全部不可见,如果子孙元素应用了visibility:visible,
+    那么这个子孙元素又会显现出来
