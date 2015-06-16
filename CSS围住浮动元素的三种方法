@@ -1,0 +1,64 @@
+    CSS围住浮动元素的三种方法
+    第一种:父元素应用overflow:hidden,以强制它包围浮动元素
+    第二种:让父元素浮动起来
+    第三种:给父元素的最后添加一个非浮动的子元素,然后清除该子元素.
+    (1)*div元素
+    (2)*使用clearfix规则
+    
+    @code
+    <!DOCTYPE html>
+    <html>
+    <head>
+       <meta charset="utf-8">
+       <title>Examples</title>
+       <style>
+    
+       section {border:1px solid blue; margin:0 0 10px 0;}
+       p {margin 0;}
+       footer {border:1px solid red;}
+       img {float:left;}
+       </style>
+    </head>
+    <body>
+       <section> 
+           <img src="test.gif" />
+           <p>It's fun to float.</p>
+       </section> 
+       <footer> Here is the footer element that runs across the bottom of the page.</footer> 
+    </body>
+    </html>
+    第一种:
+        section {border:1px solid blue; margin:0 0 10px 0; overflow:hidden;}
+    第二种:
+        section {border:1px solid blue; margin:0 0 10px 0; float:left; width:100%;}
+        footer {border:1px solid red; clear:left;}
+    注意:浮动非图片元素时,必须给它设定宽度,否则后果难以预料
+    第三种:
+    (1) <body>
+            <section class="clearfix"> 
+                <img src="test.gif" />
+                <p>It's fun to float.</p>
+                <div class="clear_me"></div>
+            </section> 
+            <footer> Here is the footer element that runs across the bottom of the page.</footer> 
+        </body>
+        <style>
+            section {border:1px solid blue; margin:0 0 10px 0;}
+            p {margin 0;}
+            footer {border:1px solid red;}
+            img {float:left;}
+            .clear_me {clear:left;}
+        </style>
+    
+    (2) <section class="clearfix"> 
+            <img src="test.jpg"> 
+            <p>It's fun to float.</p> 
+        </section>
+        .clearfix:after { 
+            content:"."; 
+            display:block; 
+            height:0; 
+            visibility:hidden; 
+            clear:both; 
+        }
+    浮动是实现多栏布局（在更多浏览器支持CSS3的Multi-column Layout Module之前）唯一最可靠的方式
