@@ -1,0 +1,4 @@
+    display:none和visibility:hidden
+    1.空间占据
+    2.回流与渲染
+    3.株连性
