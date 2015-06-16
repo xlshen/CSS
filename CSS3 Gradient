@@ -1,4 +1,4 @@
-2.CSS3 Gradient
+        CSS3 Gradient
         1.Mozilla 下
         -moz-linear-gradient( [<point> || <angle>,]? <stop>, <stop> [, <stop>]* )
         参数:其共有三个参数,第一个参数表示线性渐变的方向,top 是从上到下、left 是从左到右,如果定义成 left
