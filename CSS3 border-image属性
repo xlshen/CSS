@@ -1,4 +1,4 @@
-    II.CSS3 border-image属性[border-image参数：图片url,裁剪位置,重复性]
+    CSS3 border-image属性[border-image参数：图片url,裁剪位置,重复性]
     图片(border-image-source):使用url()调用,如果没有设置为none;
     图片裁剪位置(border-image-slice):(1)(2)(3)
         (1)没有单位话专指像素px,例如:border-image:url(border.gif) 27 repeat;这里27就是像素
