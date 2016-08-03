@@ -23,7 +23,16 @@ E ~ F //通用兄弟选择器，匹配元素F，且F是元素E后面所有兄弟
 >[3.5 结构伪类选择器](#construct)  
 >[3.6 否定伪类选择器](#deny) 
 
-<a name="dynamic"></a>动态伪类选择器  
+<a name="dynamic"></a> 
+##### 3.1 动态伪类选择器
+```javascript
+E:link //匹配元素E，且该元素定义了超链接并未访问过
+E:visited //匹配元素E，且该元素定义了超链接并已经访问过
+E:active //匹配元素E，且该元素被激活
+E:hover //匹配元素E，且鼠标停留在该元素上
+E:focus //匹配元素E，且该元素获得焦点
+```
+链接伪元素设置顺序：LoVe||HAte原则：link-visited-hover-active
 <a name="target"></a>目标伪类选择器  
 <a name="language"></a>语言伪类选择器  
 <a name="ui"></a>UI伪类选择器  
