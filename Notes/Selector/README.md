@@ -34,7 +34,10 @@ E:focus //匹配元素E，且该元素获得焦点
 ```
 链接伪元素设置顺序：LoVe||HAte原则：link-visited-hover-active
 <a name="target"></a>
-##### 3.2 目标伪类选择器  
+##### 3.2 目标伪类选择器
+```javascript
+E:target //匹配元素E，且该元素被相关URL指向【CSS3】
+```
 <a name="language"></a>语言伪类选择器  
 <a name="ui"></a>UI伪类选择器  
 <a name="construct"></a>结构伪类选择器  
