@@ -37,6 +37,7 @@ E:focus //匹配元素E，且该元素获得焦点
 ##### 3.2 目标伪类选择器
 ```javascript
 E:target //匹配元素E，且该元素被相关URL指向【CSS3】
+//IE9+
 ```
 <a name="language"></a>
 ##### 3.3 语言伪类选择器
@@ -53,7 +54,44 @@ E:target //匹配元素E，且该元素被相关URL指向【CSS3】
 ```javascript
 E:lang(language) //匹配元素E，且该元素指定了lang属性且其值为language
 ```
+<a name="ui"></a>
+##### UI伪类选择器
+>UI元素主要用于form表单元素，一般包括：启用、禁用、选中、未选中、获得焦点、失去焦点、锁定等
 
-<a name="ui"></a>UI伪类选择器  
-<a name="construct"></a>结构伪类选择器  
+```javascript
+E:checked //匹配元素E，且该元素被选中【单选按钮或复选按钮】【CSS3】
+E:enabled //匹配元素E，所有启用的表单元素【CSS3】
+E:diabled //匹配元素E，所有禁用的表单元素【CSS3】
+//IE9+
+```
+<a name="construct"></a>
+##### 结构伪类选择器
+>根据DOM结构树层次结构匹配特定的元素
+
+```javascript
+E:first-child //匹配第一个子元素E，与E:nth-child(1)等同
+E:last-child //匹配最后一个子元素E，与E:nth-last-child(1)等同
+E:root //匹配元素E所在文档的根元素，在HTML文档中始终为html元素
+E F:nth-child(n) //匹配父元素是E，第n个子元素F，其中n可以是整数、关键字（odd）、公式（-n+1），而且n起始值为1
+E F:nth-last-child(n) //匹配顺序与上面正好相反，其中nth-last-child(1)始终匹配最后一个元素
+E:nth-of-type(n) //匹配父元素指定类型的第n个子元素E
+E:nth-last-of-type(n) //匹配顺序与上面正好相反
+E:first-of-type //匹配父元素指定的第一个该类型的子元素E，与nth-of-type(1)等同
+E:last-of-type //匹配父元素指定的最后一个该类型的子元素E，与nth-last-of-type(1)等同
+E:only-child //匹配父元素只包含的唯一一个子元素E
+E:only-of-type //匹配父元素指定类型的唯一一个子元素E
+E:empty //匹配没有子元素的元素E
+//实例
+<div>
+    <ul> //ul:only-of-child
+        <li>one<li> //li:first-child[nth-child(2n+1)]
+        <li>two<li> //li:nth-child(2)
+        <li>three<li> //li:last-child[nth-child(2n+1)]
+    </ul>
+    <p>paragraph</p> 
+    <div>ddd</div> //div div:first-of-type
+    <p>message</p> //p:nth-of-type(2)
+    <b>bbb</b>
+</div>
+```
 <a name="deny"></a>否定伪类选择器  
