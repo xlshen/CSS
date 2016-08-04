@@ -69,18 +69,18 @@ E:diabled //匹配元素E，所有禁用的表单元素【CSS3】
 >根据DOM结构树层次结构匹配特定的元素
 
 ```javascript
-E:first-child //匹配第一个子元素E，与E:nth-child(1)等同
-E:last-child //匹配最后一个子元素E，与E:nth-last-child(1)等同
-E:root //匹配元素E所在文档的根元素，在HTML文档中始终为html元素
-E F:nth-child(n) //匹配父元素是E，第n个子元素F，其中n可以是整数、关键字（odd）、公式（-n+1），而且n起始值为1
-E F:nth-last-child(n) //匹配顺序与上面正好相反，其中nth-last-child(1)始终匹配最后一个元素
-E:nth-of-type(n) //匹配父元素指定类型的第n个子元素E
-E:nth-last-of-type(n) //匹配顺序与上面正好相反
-E:first-of-type //匹配父元素指定的第一个该类型的子元素E，与nth-of-type(1)等同
-E:last-of-type //匹配父元素指定的最后一个该类型的子元素E，与nth-last-of-type(1)等同
-E:only-child //匹配父元素只包含的唯一一个子元素E
-E:only-of-type //匹配父元素指定类型的唯一一个子元素E
-E:empty //匹配没有子元素的元素E
+E:first-child //匹配第一个子元素E，与E:nth-child(1)等同【CSS3】
+E:last-child //匹配最后一个子元素E，与E:nth-last-child(1)等同【CSS3】
+E:root //匹配元素E所在文档的根元素，在HTML文档中始终为html元素【CSS3】
+E F:nth-child(n) //匹配父元素是E，第n个子元素F，其中n可以是整数、关键字（odd）、公式（-n+1），而且n起始值为1【CSS3】
+E F:nth-last-child(n) //匹配顺序与上面正好相反，其中nth-last-child(1)始终匹配最后一个元素【CSS3】
+E:nth-of-type(n) //匹配父元素指定类型的第n个子元素E【CSS3】
+E:nth-last-of-type(n) //匹配顺序与上面正好相反【CSS3】
+E:first-of-type //匹配父元素指定的第一个该类型的子元素E，与nth-of-type(1)等同【CSS3】
+E:last-of-type //匹配父元素指定的最后一个该类型的子元素E，与nth-last-of-type(1)等同【CSS3】
+E:only-child //匹配父元素只包含的唯一一个子元素E【CSS3】
+E:only-of-type //匹配父元素指定类型的唯一一个子元素E【CSS3】
+E:empty //匹配没有子元素的元素E【CSS3】
 //实例
 <div>
     <ul> //ul:only-of-child
@@ -93,5 +93,6 @@ E:empty //匹配没有子元素的元素E
     <p>message</p> //p:nth-of-type(2)
     <b>bbb</b>
 </div>
+//IE9+
 ```
 <a name="deny"></a>否定伪类选择器  
