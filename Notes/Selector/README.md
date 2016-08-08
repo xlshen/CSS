@@ -107,3 +107,12 @@ E:not(F) //匹配所有除元素F以外所有的元素E【CSS3】
 //匹配出submit按钮之外的表单元素
 input:not([type=submit]){}
 ```
+#### 4. 伪元素
+>双冒号(::)表示(::first-line,::before)，对于IE6-IE8，仅支持单冒号写法，区别就是CSS3用来区别伪元素和伪类
+
+```javascript
+::first-letter //匹配文本区的第一个字母
+::first-line //匹配第一行文本
+::before,::after //额外插入内容位置,如果生成内容，要配合content属性
+::selection //匹配鼠标拖动选中的文本
+```
