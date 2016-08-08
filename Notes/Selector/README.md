@@ -132,5 +132,8 @@ input:not([type=submit]){}
 E[attr] //匹配具有属性attr的元素E
 E[attr=val] //匹配属性attr值为val的元素E
 E[attr|=val] //匹配属性attr已val开头或者val-开头的元素E
-
+E[attr~=val] //匹配元素E，且E定义了属性attr，attr属性值具有多个空格分隔的值，其中一个值为val
+E[attr*=val] //匹配元素E，且E定义了属性attr，其值任意位置包含了val
+E[attr^=val] //匹配元素E，且E定义了属性attr，其值以val开头的任意字符串
+E[attr$=val] //匹配元素E，且E定义了属性attr，其属性值以val结尾，与上面正好相反
 ```
