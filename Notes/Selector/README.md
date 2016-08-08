@@ -117,7 +117,7 @@ E:not(F) //匹配所有除元素F以外所有的元素E【CSS3】
 input:not([type=submit]){}
 ```
 <a name="pseudoEle"></a>
-#### 4. 伪元素
+#### 4. 伪元素选择器
 >双冒号(::)表示(::first-line,::before)，对于IE6-IE8，仅支持单冒号写法，区别就是CSS3用来区别伪元素和伪类
 
 ```javascript
@@ -128,3 +128,9 @@ input:not([type=submit]){}
 ```
 <a name="attr"></a>
 #### 5. 属性选择器
+```javascript
+E[attr] //匹配具有属性attr的元素E
+E[attr=val] //匹配属性attr值为val的元素E
+E[attr|=val] //匹配属性attr已val开头或者val-开头的元素E
+
+```
