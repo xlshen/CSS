@@ -1,5 +1,12 @@
 ### CSS选择器
 ***
+>1. [基本选择器](#basic)
+2. [层次选择器](#layer)
+3. [伪类选择器](#pseudo)
+4. [伪元素选择器](#pseudoEle)
+5. [属性选择器](#attr)
+
+<a name="basic"></a>
 #### 1. 基本选择器
 ```javascript
 * //通配符选择器，匹配所有HTML元素
@@ -8,6 +15,7 @@ E //元素选择器，匹配指定HTML元素
 .class //类选择器，匹配class属性为“class”的属性
 selectorA,selectorB //群组选择器，匹配元素集合
 ```
+<a name="layer"></a>
 #### 2. 层次选择器
 ```javascript
 E F //后代选择器，匹配元素F，且F是元素E的后代
@@ -15,6 +23,7 @@ E > F //子选择器，匹配元素F，且F是元素E的直接子元素，非直
 E + F //相邻兄弟选择器，匹配元素F，且F是元素E后面紧邻的兄弟元素，兄弟元素子元素不匹配
 E ~ F //通用兄弟选择器，匹配元素F，且F是元素E后面所有兄弟元素，兄弟元素子元素不匹配【CSS3】
 ```
+<a name="pseudo"></a>
 #### 3. 伪类选择器
 >[3.1 动态伪类选择器](#dynamic)  
 >[3.2 目标伪类选择器](#target)  
@@ -107,6 +116,7 @@ E:not(F) //匹配所有除元素F以外所有的元素E【CSS3】
 //匹配出submit按钮之外的表单元素
 input:not([type=submit]){}
 ```
+<a name="pseudoEle"></a>
 #### 4. 伪元素
 >双冒号(::)表示(::first-line,::before)，对于IE6-IE8，仅支持单冒号写法，区别就是CSS3用来区别伪元素和伪类
 
@@ -116,3 +126,5 @@ input:not([type=submit]){}
 ::before,::after //额外插入内容位置,如果生成内容，要配合content属性
 ::selection //匹配鼠标拖动选中的文本
 ```
+<a name="attr"></a>
+#### 5. 属性选择器
