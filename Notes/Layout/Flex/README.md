@@ -53,11 +53,62 @@
 }
 ```
 ##### flex-content
-> 多根轴线的对齐方式，如果只有一根则该属性不起作用【本人测试在Chrome下一行也起作用...】
+> 多根轴线的对齐方式，如果只有一根则该属性不起作用【本人测试在Chrome下只有一行也起作用...】
 
 ```javascript
 .box{
   display: flex;
   align-content: flex-start(default)【多行顶部对齐】| flex-end【多行底部对齐】 | center【多行居中对齐】 | space-between【垂直两端对齐】 | space-around【每行子元素上下间隔相等，子元素之间间隔是最上距离边框距离2倍】 | strech【兼容性不好，各浏览器表现不一】 
+}
+```
+#### 子元素属性
+> 1. order  
+2. flex-grow  
+3. flex-shrink  
+4. flex-basis  
+5. flex  
+6. align-self  
+
+##### order属性
+> 定义子元素排列顺序，数值越小排列越靠前，默认为0。
+
+```javascript
+.item{
+  order: <integer>;
+}
+```
+##### flex-grow属性
+> 决定子元素放大比例，默认为0，即如果存在剩余空间，也不放大。
+
+```javascript
+.item{
+  flex-grow: <number>;/* default 0 */
+}
+```
+此属性决定父元素如果比子元素宽度大，则对`剩余空间`进行按比例分割填充
+##### flex-shrink属性
+> 决定子元素缩小比例，默认为1，即如果空间不足，该子元素将缩小
+
+```javascript
+.item{
+  flex-shrink: <number>;/* default 1*/
+}
+```
+此属性决定父元素空间不足时，子元素缩小比列控制
+##### flex-basis
+> 决定了分配多余空间之前，子元素占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余的空间
+
+```javascript
+.item{
+  flex-basis: <length> | auto; /* default auto*/
+}
+```
+可以设置固定的值，则子元素占据固定的空间
+#### flex
+> flex属性是flex-grow flex-shrink flex-basis的缩写，默认值为 0 1 auto。后两个可选
+
+```javascript
+.item{
+  flex: none | [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
 }
 ```
