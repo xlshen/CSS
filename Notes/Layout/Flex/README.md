@@ -52,3 +52,12 @@
   align-items: flex-start【顶部对齐】 | flex-end【底部对齐】 | center【垂直居中对齐】 | baseline【第一行文字基线对其】 | stretch(default)【拉伸对齐】;
 }
 ```
+##### flex-content
+> 多根轴线的对齐方式，如果只有一根则该属性不起作用【本人测试在Chrome下一行也起作用...】
+
+```javascript
+.box{
+  display: flex;
+  align-content: flex-start(default)【多行顶部对齐】| flex-end【多行底部对齐】 | center【多行居中对齐】 | space-between【垂直两端对齐】 | space-around【每行子元素上下间隔相等，子元素之间间隔是最上距离边框距离2倍】 | strech【兼容性不好，各浏览器表现不一】 
+}
+```
