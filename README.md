@@ -10,5 +10,6 @@
 
 ***
 #### CSS小知识点系列
-+ [CSS选择器系列](https://github.com/xlshen/CSS/blob/master/Notes/Selector/Basis/README.md "CSS选择器系列")
++ [CSS选择器系列](https://github.com/xlshen/CSS/blob/master/Notes/Selector/ "CSS选择器系列")
+ - [Basis](https://github.com/xlshen/CSS/blob/master/Notes/Selector/Basis/README.md "CSS选择器系列")
 + [CSS布局系列](https://github.com/xlshen/CSS/blob/master/Notes/Layout/Flex/README.md "CSS布局系列")
