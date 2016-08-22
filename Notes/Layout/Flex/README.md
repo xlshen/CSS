@@ -104,11 +104,19 @@
 }
 ```
 可以设置固定的值，则子元素占据固定的空间
-#### flex
+##### flex属性
 > flex属性是flex-grow flex-shrink flex-basis的缩写，默认值为 0 1 auto。后两个可选
 
 ```javascript
 .item{
   flex: none | [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
+}
+```
+##### align-self属性
+> 允许单个子元素与其他子元素不一样的对齐方式，可覆盖`align-items`属性。
+
+```javascript
+.item{
+  align-self: auto(default)【表示继承父元素的align-items属性】 | flex-start | flex-end | center | baseline | stretch;
 }
 ```
