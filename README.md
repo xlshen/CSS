@@ -13,4 +13,4 @@
 + [CSS选择器系列](https://github.com/xlshen/CSS/blob/master/Notes/Selector/ "CSS选择器系列")
  - [Basis](https://github.com/xlshen/CSS/blob/master/Notes/Selector/Basis/README.md "CSS Basic")
 + [CSS布局系列](https://github.com/xlshen/CSS/blob/master/Notes/Layout/ "CSS布局系列")
- - [Flx](https://github.com/xlshen/CSS/blob/master/Notes/Layout/Flex/README.md "Layout Flex")
+ - [Flex](https://github.com/xlshen/CSS/blob/master/Notes/Layout/Flex/README.md "Layout Flex")
