@@ -13,3 +13,42 @@
 6. align-content  
 
 ##### flex-direction
+> 决定主轴的子元素排列方向
+
+```javascript
+.box{
+  display: flex;
+  flex-direction: row(default)【→】 | row-reverse【←】 | column【↓】 | column-reverve【↑】;
+}
+```
+##### flex-wrap
+> 决定子元素在水平方向排列不下如何换行
+
+```javascript
+.box{
+  display: flex;
+  flex-wrap: nowrap(default) | wrap【换到下一行排列】| wrap-reverse【还行到上一行排列】
+  //如果父元素flex-wrap:wrap，子元素设置了宽度，则子元素的宽度失效
+}
+```
+##### flex-flow
+> flex-flow: flex-direction flex-wrap的缩写
+
+##### justify-content
+> 决定子元素在主轴上的对齐方式
+
+```javascript
+.box{
+  display: flex;
+  justify-content: flex-start(default)【左对齐】 | flex-end【右对齐】 | center【居中】| space-between【两端对齐】 | space-around【子元素左右间隔相等，两个子元素之间间隔是最外子元素到边框的距离的2倍】;
+}
+```
+##### align-items
+> 决定子元素在交叉轴对其方式
+
+```javascript
+.box{
+  display: flex;
+  align-items: flex-start【顶部对齐】 | flex-end【底部对齐】 | center【垂直居中对齐】 | baseline【第一行文字基线对其】 | stretch(default)【拉伸对齐】;
+}
+```
