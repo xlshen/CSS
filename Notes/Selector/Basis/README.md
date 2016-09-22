@@ -41,7 +41,7 @@ E:active //匹配元素E，且该元素被激活
 E:hover //匹配元素E，且鼠标停留在该元素上
 E:focus //匹配元素E，且该元素获得焦点
 ```
-链接伪元素设置顺序：LoVe||HAte原则：link-visited-hover-active
+链接伪元素设置顺序：`LoVe||HAte原则：link-visited-hover-active`
 <a name="target"></a>
 ##### 3.2 目标伪类选择器
 ```javascript
@@ -53,11 +53,11 @@ E:target //匹配元素E，且该元素被相关URL指向【CSS3】
 >语言伪类选择器是根据元素的语言编码匹配元素，这种语言信息必须包含在文档中或与文档关联，不能从CSS指定。为文档指定语言有两种方式：
 
 1 . 如果HTML5，直接设置文档语言：
-```javascript
+```html
 <html lang="en-US">
 ```
 2 . 手工在文档中指定lang属性，并设置对应的语言值：
-```javascript
+```html
 <body lang="fr">
 ```
 ```javascript
