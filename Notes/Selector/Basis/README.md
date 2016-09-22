@@ -90,6 +90,8 @@ E:last-of-type //匹配父元素指定的最后一个该类型的子元素E，�
 E:only-child //匹配父元素只包含的唯一一个子元素E【CSS3】
 E:only-of-type //匹配父元素指定类型的唯一一个子元素E【CSS3】
 E:empty //匹配没有子元素的元素E【CSS3】
+```
+```html
 //实例
 <div>
     <ul> //ul:only-of-child
