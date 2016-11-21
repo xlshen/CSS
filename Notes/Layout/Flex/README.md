@@ -118,7 +118,7 @@ flex-basis 伸缩基准值
 子元素伸缩值计算方式：
 ① 加权值： item = (flex-shrink) * flex-basis, 加权值 = item1 + item2 + ... + itemN;
 ② 压缩后宽度： (子元素flex-basis值 * (flex-shrink)/加权值) * 溢出值
-注：此时计算时，子元素的margin和padding单独从总的宽度中取出来不参与计算！
+注：此时计算时，子元素的margin和padding单独从总的宽度中减不参与计算！
 ```
 ##### align-self属性
 > 允许单个子元素与其他子元素不一样的对齐方式，可覆盖`align-items`属性。
