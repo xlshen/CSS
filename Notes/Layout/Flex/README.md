@@ -52,7 +52,7 @@
   align-items: flex-start【顶部对齐】 | flex-end【底部对齐】 | center【垂直居中对齐】 | baseline【第一行文字基线对其】 | stretch(default)【拉伸对齐】;
 }
 ```
-##### flex-content
+##### align-content
 > 多根轴线的对齐方式，如果只有一根则该属性不起作用【本人测试在Chrome下只有一行也起作用...】
 
 ```html
