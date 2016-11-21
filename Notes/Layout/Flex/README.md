@@ -15,7 +15,7 @@
 ##### flex-direction
 > 决定主轴的子元素排列方向
 
-```javascript
+```html
 .box{
   display: flex;
   flex-direction: row(default)【→】 | row-reverse【←】 | column【↓】 | column-reverve【↑】;
@@ -24,7 +24,7 @@
 ##### flex-wrap
 > 决定子元素在水平方向排列不下如何换行
 
-```javascript
+```html
 .box{
   display: flex;
   flex-wrap: nowrap(default) | wrap【换到下一行排列】| wrap-reverse【还行到上一行排列】
@@ -37,7 +37,7 @@
 ##### justify-content
 > 决定子元素在主轴上的对齐方式
 
-```javascript
+```html
 .box{
   display: flex;
   justify-content: flex-start(default)【左对齐】 | flex-end【右对齐】 | center【居中】| space-between【两端对齐】 | space-around【子元素左右间隔相等，两个子元素之间间隔是最外子元素到边框的距离的2倍】;
@@ -46,7 +46,7 @@
 ##### align-items
 > 决定子元素在交叉轴对其方式
 
-```javascript
+```html
 .box{
   display: flex;
   align-items: flex-start【顶部对齐】 | flex-end【底部对齐】 | center【垂直居中对齐】 | baseline【第一行文字基线对其】 | stretch(default)【拉伸对齐】;
@@ -55,7 +55,7 @@
 ##### flex-content
 > 多根轴线的对齐方式，如果只有一根则该属性不起作用【本人测试在Chrome下只有一行也起作用...】
 
-```javascript
+```html
 .box{
   display: flex;
   align-content: flex-start(default)【多行顶部对齐】| flex-end【多行底部对齐】 | center【多行居中对齐】 | space-between【垂直两端对齐】 | space-around【每行子元素上下间隔相等，子元素之间间隔是最上距离边框距离2倍】 | strech【兼容性不好，各浏览器表现不一】 
@@ -72,7 +72,7 @@
 ##### order属性
 > 定义子元素排列顺序，数值越小排列越靠前，默认为0。
 
-```javascript
+```html
 .item{
   order: <integer>;
 }
@@ -80,7 +80,7 @@
 ##### flex-grow属性
 > 决定子元素放大比例，默认为0，即如果存在剩余空间，也不放大。
 
-```javascript
+```html
 .item{
   flex-grow: <number>;/* default 0 */
 }
@@ -89,7 +89,7 @@
 ##### flex-shrink属性
 > 决定子元素缩小比例，默认为1，即如果空间不足，该子元素将缩小
 
-```javascript
+```html
 .item{
   flex-shrink: <number>;/* default 1*/
 }
@@ -98,7 +98,7 @@
 ##### flex-basis
 > 决定了分配多余空间之前，子元素占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余的空间
 
-```javascript
+```html
 .item{
   flex-basis: <length> | auto; /* default auto*/
 }
@@ -107,15 +107,23 @@
 ##### flex属性
 > flex属性是flex-grow flex-shrink flex-basis的缩写，默认值为 0 1 auto。后两个可选
 
-```javascript
+```html
 .item{
   flex: none | [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>]
 }
+flex-grow 是扩展比率
+flex-shrink 是收缩比率
+flex-basis 伸缩基准值
+第一种情况：父元素宽度 < 子元素总宽度
+子元素伸缩值计算方式：
+① 加权值： item = (flex-shrink) * flex-basis, 加权值 = item1 + item2 + ... + itemN;
+② 压缩后宽度： (子元素flex-basis值 * (flex-shrink)/加权值) * 溢出值
+注：此时计算时，子元素的margin和padding单独从总的宽度中取出来不参与计算！
 ```
 ##### align-self属性
 > 允许单个子元素与其他子元素不一样的对齐方式，可覆盖`align-items`属性。
 
-```javascript
+```html
 .item{
   align-self: auto(default)【表示继承父元素的align-items属性】 | flex-start | flex-end | center | baseline | stretch;
 }
